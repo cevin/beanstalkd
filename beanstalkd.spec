@@ -39,7 +39,7 @@ asynchronously.
 
 
 %build
-make LDFLAGS="%{?__global_ldflags}" CFLAGS="%{optflags}" %{?_smp_mflags}
+make LDFLAGS="%{?__global_ldflags}" CFLAGS="-Wno-error=stringop-truncation %{optflags}" %{?_smp_mflags}
 
 
 %check
